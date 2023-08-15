@@ -38,7 +38,42 @@ class TodoListPage extends StatelessWidget {
                 )
               ],
             ),
-            const SizedBox(height: 30,),
+            const SizedBox(
+              height: 16,
+            ),
+            ListView(
+              shrinkWrap: true,
+              children: [
+                ListTile(
+                  title: Text('Tarefa 1'),
+                  subtitle: Text('20/11/2021'),
+                  leading: const Icon(
+                    Icons.save_as,
+                    size: 30,
+                  ),
+                  iconColor: Colors.green,
+                  minLeadingWidth: 0,
+                  onTap: () {
+                    print('print on tap 1');
+                  },
+                ),
+                ListTile(
+                  title: Text('Tarefa 2'),
+                  subtitle: Text('21/11/2021'),
+                  onTap: () {
+                    print('print on tap 2');
+                  },
+                  leading: const Icon(
+                    Icons.person_2,
+                    size: 30,
+                  ),
+                  minLeadingWidth: 0,
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 16,
+            ),
             Row(
               children: [
                 const Expanded(child: Text('Você nao tem tarefas')),
